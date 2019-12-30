@@ -17,6 +17,7 @@ connection.start().catch(function(err) {
     return console.error(err.toString());
 });
 
+// js client call public method on hubs via the invoke method of the HubConnection
 document.getElementById("sendButton").addEventListener("click", function(event) {
     var message = document.getElementById("message").value;
     connection.invoke("SendMessageToAll", message).catch(function (err) {
